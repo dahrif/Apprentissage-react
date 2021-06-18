@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
+    <script type="text/babel">
+
+    class Welcome extends React.component {
+        constructor(props){
+            super(props)
+        }
+
+        render(){
+            return <h1>welcome {this.props.name}</h1>;
+        }
+    }
+
+    class App extends React.component{
+
+        nameArray=[
+            {name : 'fatima'},
+            {name : 'dahri'},
+            {name : 'tesy'},
+
+        ];
+        constructor(props) {
+        super(props)
+    }
+    render(){
+
+        return(
+        <Welcome 
+        name={Welcome.name}
+         />
+         )
+    }
+
+    
+}
+
+return(
+    <div>
+        {nameArray}
+    </div>
+)
+
+
+        ReactDOM.render(
+            <App />, document.getElementById('root')
+        );
+
+    </script>
+    </body>
+    </html>
