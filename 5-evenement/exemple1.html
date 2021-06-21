@@ -14,9 +14,24 @@
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
     <script type="text/babel">
-        class clock extends React.Componenet {
-            
+        class App extends React.Component {
+            myfunction(){
+                let data = this.props;
+                alert("Bonjour")
+            }
+
+            render() {
+                return (
+                    <div>
+                        <button onClick = {this.myfunction.bind(this)}>Cliquez ici</button>
+                    </div>
+                );
+            }
         }
+        ReactDOM.render(
+            <App />,
+            document.getElementById('root')
+        );
     </script>
     </body>
     </html>
